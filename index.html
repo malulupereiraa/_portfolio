@@ -12,7 +12,7 @@
   <meta property="og:image:width" content="800">
   <meta property="og:image:height" content="600">
   <link rel="icon" href="img/Logo/icon.ico">
-  <title>Malu Pereira</title>
+  <title>Malu Pereira</title> <!--teste-->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
@@ -293,7 +293,7 @@
     </div>
     <!-- Second container -->
     <!--Streak-->
-    <div class="streak streak-photo streak-md" style="background-image:url('../../../../img/Photos/Horizontal/Things/full%20page/img%20(7).jpg')">
+    <div class="streak streak-photo streak-md" style="background-image:url('img/Photos/Horizontal/Things/full%20page/img%20(7).jpg')">
       <div class="flex-center mask rgba-gradient">
         <div class="text-center white-text">
           <h3 class="h3-responsive mb-5"><i class="fa fa-quote-left" aria-hidden="true"></i> Lorem ipsum dolor sit amet,
@@ -794,15 +794,15 @@
         <div class="row wow fadeIn" data-wow-delay="0.4s">
           <!--First column-->
           <div class="col-md-8 mb-5">
-            <form>
+            <form action="" id="formContato" method="post">
               <!--First row-->
               <div class="row">
                 <!--First column-->
                 <div class="col-md-6">
                   <div class="md-form mb-0">
                     <div class="md-form mb-0">
-                      <input type="text" id="form41" class="form-control">
-                      <label for="form41" class="">Nome:</label>
+                      <input type="text" required name="nome" id="nome" class="form-control nome">
+                      <label for="nome" class="">Nome:</label>
                     </div>
                   </div>
                 </div>
@@ -810,8 +810,8 @@
                 <div class="col-md-6">
                   <div class="md-form mb-0">
                     <div class="md-form mb-0">
-                      <input type="text" id="form52" class="form-control">
-                      <label for="form52" class="">Email:</label>
+                      <input type="text" required name="email" id="email" class="form-control email">
+                      <label for="email" class="">Email:</label>
                     </div>
                   </div>
                 </div>
@@ -821,8 +821,8 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="md-form mb-0">
-                    <input type="text" id="form51" class="form-control">
-                    <label for="form51" class="">Assunto:</label>
+                    <input type="text" required name="assunto" id="assunto" class="form-control assunto">
+                    <label for="assunto" class="">Assunto:</label>
                   </div>
                 </div>
               </div>
@@ -832,16 +832,18 @@
                 <!--First column-->
                 <div class="col-md-12">
                   <div class="md-form mb-0">
-                    <textarea type="text" id="form76" class="md-textarea form-control" rows="3"></textarea>
-                    <label for="form76">Mensagem:</label>
+                    <textarea type="text" required name="mensagem" id="mensagem" class="md-textarea form-control mensagem" rows="3"></textarea>
+                    <label for="mensagem">Mensagem:</label>
                   </div>
                 </div>
               </div>
               <!--/.Third row-->
+              <div class="text-center text-md-left mt-4">
+                <button class="btn btn-secondary btn-rounded" type="submit" name="submit">Enviar</button>
+              </div>
+              <div id="resp"></div>
             </form>
-            <div class="text-center text-md-left mt-4">
-              <a class="btn btn-secondary btn-rounded">Enviar</a>
-            </div>
+           
           </div>
           <!--.First column-->
           <!--Second column-->
@@ -938,6 +940,12 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- MAIL VALIDATOR -->
+  <script type="text/javascript" src="js/mailValidator.js"></script>
+  <!-- Notify -->
+  <script src="js/components/notify/notify.min.js"></script>
+  <script src="js/components/notify/notify-metro.js"></script>
+  <script src="js/jquery.core.js"></script>
   <script>
     //Animation init
     new WOW().init();
@@ -949,7 +957,7 @@
 
     // initialize lightbox
     $(function () {
-      $("#mdb-lightbox-ui").load("https://mdbootstrap.com/previews/templates/portfolio/mdb-addons/mdb-lightbox-ui.html");
+      $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
     });
 
     $('.navbar-collapse a').click(function () {
