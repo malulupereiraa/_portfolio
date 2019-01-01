@@ -255,7 +255,7 @@
             </div>
             <br>
             <strong>WEB DESIGN / FRONT-END</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>-->
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center mt-1">
@@ -265,7 +265,7 @@
             </div>
             <br>
             <strong>BRANDING</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>-->
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center mt-1">
@@ -275,7 +275,7 @@
             </div>
             <br>
             <strong>PRINT DESIGN</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>-->
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center mt-1">
@@ -285,7 +285,7 @@
             </div>
             <br>
             <strong>UI/UX</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>-->
           </div>
         </div>
       </div>
@@ -916,7 +916,14 @@
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
       <div class="container-fluid">
-        © 2018 Copyright: <a href="https://www.malupereira.com.br" target="_blank"> Malu Pereira </a>
+        © <!--@DateTime.Now.Year-->
+        <script language="JavaScript" type="text/javascript">
+            now = new Date
+            theYear = now.getYear()
+            if (theYear < 1900)
+                theYear = theYear + 1900
+            document.write(theYear)
+        </script> Copyright: <a href="https://www.malupereira.com.br" target="_blank"> Malu Pereira </a>
       </div>
     </div>
     <!--/Copyright-->
